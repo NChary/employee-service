@@ -58,7 +58,8 @@ public class EmployeeController {
 	
 	//Delete by eid
 	@DeleteMapping("/employee/{employeeId}")
-	public String deleteByEid(@PathVariable Integer employeeId) {
+	public String deleteByEid(@PathVariable Integer employeeId) 
+	{
 		return employeeService.deleteByEid(employeeId);
 	}
 	

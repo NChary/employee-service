@@ -21,11 +21,18 @@ public class EmployeeServiceImpl implements EmployeeService{
 		return "Got request to Service layer : "+employee.getEname();
 	}
 
+	/**
+	 * This method returns all employees
+	 */
 	@Override
 	public List<Employee> getEmployees() {
 		return employeeRepository.findAll();
 	}
 
+	/**
+	 * This method update employee details
+	 */
+	
 	@Override
 	public String updateEmployee(Employee employee) {
 		employeeRepository.save(employee);              // save() - if id doesnt exit in the database then create it as new record; id is existed - update data
